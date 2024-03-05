@@ -13,7 +13,10 @@ if (age > 65) {
     console.log(bigDiscount)
     const bigDiscountPrice = price - bigDiscount
     console.log(bigDiscountPrice)
-
 } else if (age < 18);
+    const smallDiscount = price * 20 / 100
+    console.log(smallDiscount)
+    const smallDiscountPrice = price - smallDiscount
+    console.log(smallDiscountPrice)
 //arrotondare output ai centesimi
 //mostrare risultato
