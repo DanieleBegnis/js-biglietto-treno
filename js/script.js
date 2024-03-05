@@ -4,17 +4,33 @@ const travelDistance = parseInt(prompt('Inserire quanti km sono da percorrere'))
 //moltiplicare kilometri per 0,21
 const price = travelDistance * 0.21
 //applicare sconto del 20% per under 18 e 40% per over 65
-let userDiscount = price
 if (age > 65) {
-    console.log('Il discount per anziani è ' + price * 0.6 + '$');
+    let userDiscount = price * 0.6;
+    console.log('Il prezzo per anziani è ' + price * 0.6 + '$');
+    //arrotondare output ai centesimi
+    let priceFix = userDiscount.toFixed(2);
+    console.log(priceFix)
+    //mostrare risultato
+    finalPriceMessage = ('Il costo totale è ' + priceFix + ('$'));
+    document.getElementById('message').innerHTML = finalPriceMessage
 } else if (age < 18) {
-    console.log('il discount per minorenni è' + price * 0.8 + '$')
+    let userDiscount = price * 0.8;
+    console.log('il prezzo per minorenni è ' + price * 0.8 + '$')
+    //arrotondare output ai centesimi
+    let priceFix = userDiscount.toFixed(2);
+    console.log(priceFix)
+    //mostrare risultato
+    finalPriceMessage = ('Il costo totale è ' + priceFix + ('$'));
+    document.getElementById('message').innerHTML = finalPriceMessage
 } else {
-    console.log('il prezzo è' + price + '$')
+    let userDiscount = price;
+    console.log('il prezzo è ' + price + '$')
+    //arrotondare output ai centesimi
+    let priceFix = userDiscount.toFixed(2);
+    console.log(priceFix)
+    //mostrare risultato
+    finalPriceMessage = ('Il costo totale è ' + priceFix + ('$'));
+    document.getElementById('message').innerHTML = finalPriceMessage
 }
-//arrotondare output ai centesimi
-let priceFix = userDiscount.toFixed(2);
-console.log(priceFix)
-//mostrare risultato
-finalPriceMessage = ('Il costo totale è ' + priceFix + ('$'));
-document.getElementById('message').innerHTML = finalPriceMessage
+console.log(userDiscount);
+
