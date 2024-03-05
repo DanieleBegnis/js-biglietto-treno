@@ -7,5 +7,13 @@ console.log(travelDistance);
 const price = travelDistance * 0.21
 console.log(price)
 //applicare sconto del 20% per under 18 e 40% per over 65
+let userAge
+if (age > 65) {
+    const bigDiscount = price * 40 / 100
+    console.log(bigDiscount)
+    const bigDiscountPrice = price - bigDiscount
+    console.log(bigDiscountPrice)
+
+} else if (age < 18);
 //arrotondare output ai centesimi
 //mostrare risultato
