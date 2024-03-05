@@ -10,7 +10,7 @@ if (age > 65) {
 } else if (age < 18) {
     console.log('il discount per minorenni è' + price * 0.8 + '$')
 } else {
-
+    console.log('il prezzo è' + price + '$')
 }
 //arrotondare output ai centesimi
 let priceFix = userDiscount.toFixed(2);
